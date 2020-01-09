@@ -1,6 +1,4 @@
 # Moviestargram
-
-## What is this?
 Moviestagram은 Instagram을 모티브한 것으로 그 시대가 좋아했던 영화 세 가지를 명대사, 명장면 등과 같은 것으로 구성했다. DB 연동없이 AWS 무료 호스팅을 이용해 웹프로그래밍 과목 과제 제출용이었다
 
 **Forward**
