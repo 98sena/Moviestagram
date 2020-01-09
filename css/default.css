@@ -1,0 +1,74 @@
+html{
+    background-color: #2d2d2d;
+    color:#f5f5f5;
+    font-family: '나눔고딕';
+}
+
+body{
+    margin:0px;
+}
+
+@font-face{
+    font-family:'billabong';
+    font-style: normal;
+    src:url(http://3.18.180.175/fonts/billabong.eot);
+    src:url(http://3.18.180.175/fonts/billabong.eot?#iefix) format('embedded-opentype'),
+    url( http://3.18.180.175/fonts/billabong.woff ) format('woff'),
+    url( http://3.18.180.175/fonts/billabong.ttf ) format('truetype');
+    src:local(※), url(http://3.18.180.175/fonts/billabong.woff ) format('woff');
+}
+
+#title{
+    color:transparent;
+    background:#5b49d9;
+    background:linear-gradient(to right,  #5b49d9,#b927a4 25%, #ef1f43 50%, #fec053 75%);
+    -webkit-background-clip: text;
+            background-clip: text;
+    position: fixed;
+    left:50%;
+    transform: translateX(-50%);
+    font-family:'billabong';
+    font-size:70px;
+    margin-top:10px;
+    text-align: center;
+    padding:0px 10px;
+}
+
+#title #explain{
+    font-family: '나눔고딕';
+    font-display: italic;
+    color:#f5f5f5;
+    font-size: 13px;
+    margin-right:20px;
+}
+
+#menu{
+    font-family: '나눔고딕';
+    border:1px solid #f5f5f5;
+    text-align:center;
+    width:85px; 
+    float:right;
+    margin:25px 25px 0px 0px;
+}
+#main{
+    padding:auto;
+}
+#menu ul{
+    display:none;
+    padding:0px;
+    margin:0px;
+}
+#menu li{
+    list-style: none;
+    padding:0px;
+    margin:0px;
+}
+#menu a{
+    width:85px;
+    height:35px;
+    display:block;
+    line-height: 35px;
+    padding:auto;
+    color:#f5f5f5;
+    text-decoration: none;
+}

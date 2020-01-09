@@ -1,0 +1,95 @@
+
+#movieRow{
+    display: flex;
+    flex-direction: row;
+    position:fixed;
+    top:58%;left:50%;
+    transform: translate(-50%,-50%);
+}
+
+#movieRow .movie{
+    flex-basis: 350px;
+    margin: 20px 30px;
+    background:#fdfdfd;
+    border:1px solid #d7d7d7;
+    color:#4b4d51;
+}
+  
+.movieHead{
+    padding:10px 0px;
+    color:black;
+    /*width:48%;*/
+    width:350px;
+}
+
+.movieHead img{
+    margin:0px 10px 0px 5px;
+    width:30px;
+    border-radius:30px;
+    vertical-align: middle;
+
+}
+
+.movieHead .movieTitle{
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+.movieHead #dot{
+    float:right;
+    font-size: 14px;
+    color: #4b4d51;
+    margin: 10px 10px 10px 0px;
+}
+.movieBody{
+    height:350px;
+}
+
+.movieBody img{
+    width:350px;
+}
+
+.movieBody video{
+    background:black;
+    width:350px;
+    height:350px;
+}
+
+.movieBody div{
+    border:1px solid black;
+}
+
+.movieBody div{
+    height:350px;
+    text-align:center;
+    line-height:350px;
+}
+
+.movieTail{
+    margin-left:13px;
+    margin-top:0px;
+    margin-bottom: 0px;
+}
+.movieTail .icon{
+    margin-top: 13px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.movieTail .likes{
+    margin-top:0px;
+    margin-bottom: 6px;
+}
+.movieTail .middle{
+    margin-top:6px;
+    margin-bottom: 6px;
+}
+.movieTail .content{
+    font-weight: normal;
+    font-size: smaller;
+}
+.movieTail .date{
+    margin-bottom: 13px;
+    font-weight: normal;
+    font-size:9px;
+    color:#c5c5c5;
+}

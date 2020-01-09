@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Harry Potter</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="css/movie.css">
+    <link rel="stylesheet" href="css/default.css">
+    <script type=”text/javascript” src=”/path/to/jquery.js”></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+    <script>
+        var mouseOver="<a href='./meninblack.html' class='menus'>맨인블랙</a><a href='./harrypotter.html' class='menus'>해리포터</a><a href='./avengers.html' class='menus'>어벤져스</a>";
+        $(document).ready(function(){
+            $('#menu').hover(function(){
+                $('#drop').stop().fadeToggle(300);
+            });
+            var show=prompt("이미지를 표시할까용? ('네', '아니오'로 대답해주세요)");
+            var first='<img src="imgs/harrys.jpeg">';
+            var third='<img src="imgs/always.jpeg">';
+            var second='<video controls preload loop poster="imgs/harry_final_bettle.jpg"><source src="videos/harry_final_battle.mp4" type="video/mp4"</video>'
+            if(show!='네'&&show!='아니오'){
+                show=prompt("'네','아니오'로 대답해주세요.");
+            }
+            if(show=='네'){
+                $('#first').html(first);
+                $('#second').html(second);
+                $('#third').html(third);
+            }
+            else if(show=='아니오'){
+                $('.movieBody').html('<div>click시 내용이 보입니다.</div>');
+                $('#first').click(function(){
+                    $('#first').html(first);
+                });
+                $('#second').click(function(){
+                    $('#second').html(second)
+                });
+                $('#third').click(function(){
+                    $('#third').html(third);
+                });
+            }
+            var fnumber=Number($('#first-number').text());
+            var snumber=Number($('#second-number').text());
+            var tnumber=Number($('#third-number').text());
+            $('#first-heart').click(function(){
+                $('#first-heart').attr('class','fas fa-heart').css({
+                    color:"#d3304e"
+                });
+                fnumber++;
+                $('#first-number').text(fnumber);
+            });
+            $('#second-heart').click(function(){
+                $('#second-heart').attr('class','fas fa-heart').css({
+                    color:"#d3304e"
+                });
+                snumber++;
+                $('#second-number').text(snumber);
+            });
+            $('#third-heart').click(function(){
+                $('#third-heart').attr('class','fas fa-heart').css({
+                    color:"#d3304e"
+                });
+                tnumber++;
+                $('#third-number').text(tnumber);
+            });
+        }); 
+        
+
+    </script>
+
+</head>
+<body>
+    <audio loop autoplay>
+        <source src="audios/Hedwig's Theme Alternate Short.mp3" type="audio/mp3">
+    </audio>
+    <span id="title">
+        Harry Potter
+        <div id="explain">하트를 눌러주세요!</div>
+    </span>
+    <div id="menu">
+        <a id="main" href="./index.html">메뉴</a>
+        <ul id="drop">
+            <li><a href="./meninblack.html">맨인블랙</a></li>
+            <li><a href="./harrypotter.html">해리포터</a></li>
+            <li><a href="./avengers.html">어벤져스</a></li>
+        </ul>
+    </div>
+    <div id="movieRow">
+        <div class="movie">
+            <div class="movieHead">
+                <img src="imgs/harrypotter.jpg">
+                <span class="movieTitle">harry_potter</span>
+                <i class="fas fa-ellipsis-h" id="dot"></i>
+            </div>
+            <div class="movieBody" id="first">
+                
+            </div>
+            <div class="movieTail">
+                <p class="icon">
+                    <i class="far fa-heart" id="first-heart" ></i>
+                </p>
+                <p class="likes" id="first-likes"><span id="first-number">1224</span> likes</p>
+                <p class="middle">
+                    <span class="id">harry_potter</span>
+                    <span class="content">호그와트 삼총사</span>
+                </p>
+                <p class="date">14 DECEMBER 2001</p>
+            </div>
+        </div>
+        <div class="movie">
+            <div class="movieHead">
+                <img src="imgs/harrypotter.jpg">
+                <span class="movieTitle">harry_potter</span>
+                <i class="fas fa-ellipsis-h" id="dot"></i>
+            </div>
+            <div class="movieBody" id="second">
+
+            </div>
+            <div class="movieTail">
+                <p class="icon">
+                        <i class="far fa-heart" id="second-heart" ></i>
+                </p>
+                <p class="likes" id="first-likes"><span id="second-number">37</span> likes</p>
+                <p class="middle">
+                    <span class="id">harry_potter</span>
+                    <span class="content">Last Battle : Voldmort is GONE</span>
+                </p>
+                <p class="date">14 DECEMBER 2001</p>
+            </div>
+        </div>
+        <div class="movie">
+            <div class="movieHead">
+                <img src="imgs/harrypotter.jpg">
+                <span class="movieTitle">harry_potter</span>
+                <i class="fas fa-ellipsis-h" id="dot"></i>
+            </div>
+            <div class="movieBody" id="third">
+                
+            </div>
+            <div class="movieTail">
+            <p class="icon">
+                    <i class="far fa-heart" id="third-heart" ></i>
+            </p>
+            <p class="likes" id="first-likes"><span id="third-number">2001</span> likes</p>
+            <p class="middle">
+                <span class="id">harry_potter</span>
+                <span class="content">"Always"</span>
+            </p>
+            <p class="date">14 DECEMBER 2001</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

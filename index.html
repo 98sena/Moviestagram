@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Moviestagram</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/default.css">
+    <script type=”text/javascript” src=”/path/to/jquery.js”></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <style>
+    </style>
+    <script>
+        var mouseOver="<a href='./meninblack.html' class='menus'>맨인블랙</a><a href='./harrypotter.html' class='menus'>해리포터</a><a href='./avengers.html' class='menus'>어벤져스</a>";
+        var sub=$('#ok');
+        $(document).ready(function(){
+            $('#menu').hover(function(){
+                $('#drop').stop().fadeToggle(300);
+            });
+            $('#ok').click(function(){
+                var birthyear=$('#year').val();
+                if(birthyear>1989&&birthyear<2003){
+                    $('#ok').attr('href','./harrypotter.html');
+                }
+                else if(birthyear>=2003){
+                    $('#ok').attr('href','./avengers.html');
+                }
+                else{
+                    $('#ok').attr('href','./meninblack.html');
+                }
+            });
+        }); 
+    </script>
+</head>
+<body>
+    <span id="title">
+        Moviestagram
+        <div id="explain">내가 좋아했던 영화</div>
+    </span>
+    <div id="menu">
+        <a id="main" href="./index.html">메뉴</a>
+        <ul id="drop">
+            <li><a href="./meninblack.html">맨인블랙</a></li>
+            <li><a href="./harrypotter.html">해리포터</a></li>
+            <li><a href="./avengers.html">어벤져스</a></li>
+        </ul>
+    </div>
+    <div id="box">
+        <div id="question">언제 태어나셨나요?</div>
+        <div id="input">
+            <input type="text" id="year" name="age" placeholder="숫자만 적어주세요."/>
+            <a id="ok" href="">확인</a>
+        </div>
+    </div>
+</body>
+</html>
